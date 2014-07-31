@@ -1,0 +1,52 @@
+<div ng-controller="ModalDemoCtrl">
+    <script type="text/ng-template" id="myModalContent.html">
+        <form method="get" role="form" name="postForm" class="modal-body" novalidate>
+            <div class="form-group">
+                <label for="author">Author</label>
+                <input class="form-control" id="author" placeholder="Enter author" ng-model="data.author" required>
+            </div>
+            <div class="form-group">
+                <label for="img">Image</label>
+                <input class="form-control" id="img" placeholder="Enter img" ng-model="data.img">
+            </div>
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input class="form-control" id="title" placeholder="Enter title" ng-model="data.title" required>
+            </div>
+            <div class="form-group">
+                <label for="text">Text</label>
+                <textarea class="form-control" rows="3" id="text" placeholder="Enter text" ng-model="data.text"
+                          required></textarea>
+            </div>
+            <!--<div class="form-group" ng-controller="uploadCtrl" ng-click="showImage = !showImage">-->
+            <!--<label for="image">Image</label>-->
+            <!--<input my-upload type="file" id="image" fileread="data.img">-->
+            <!--<img src="{{image}}" alt="" ng-show="showImage" style="border: 1 solid #000000">-->
+            <!--</div>-->
+            <br/>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="postForm.$invalid" ng-click="submit()">OK
+                </button>
+                <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+            </div>
+        </form>
+    </script>
+    <button class="btn btn-default" ng-click="open()">Add new post</button>
+    <br/>
+
+    <div class="blog" ng-repeat="post in posts">
+        <img class="big" ng-src="{{post.img}}"/>
+        <h4><a href="#" class="bloghref">{{post.title}}</a></h4>
+        <hr>
+        <div class="lorem" >
+            <span>{{post.date | date:'hh:mm  MMMM dd, yyyy'}}</span>
+            <span style="float: right">by {{post.author}}</span>
+        </div>
+        <hr>
+        <p class="lorem">
+            {{post.text}}
+        </p>
+    </div>
+</div>
+

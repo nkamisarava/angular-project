@@ -77,3 +77,148 @@ body {
     border-bottom: 0;
   }
 }
+.wrap {
+    position:relative;
+    margin:0 auto;
+    width:100%;
+    height: 90px;
+    text-align: center;
+}
+
+#header, #footer {
+    width:100%;
+    float:left;
+}
+
+a.logo {
+    background: url("../img/logo.png") no-repeat center;
+    display: inline-block;
+    height: 56px;
+    width: 366px;
+}
+
+a.clock {
+    background: url("../img/clock.png") no-repeat center;
+    display: inline-block;
+    width: auto;
+}
+
+div.logo {
+    text-align: center;
+    display: inline-flex;
+    height: 90px;
+    align-items: center;
+}
+
+aside {
+    float: right;
+    border: 1px solid red;
+    width: 255px;
+    background-color: papayawhip;
+    /*margin-left: 30px;*/
+}
+
+.main {
+    width: 925px;
+    margin: 0 auto;
+    background-color: darkkhaki;
+}
+
+#content {
+    width: 640px;
+    float: left;
+    border: 1px solid red;
+    background-color: aquamarine;
+}
+
+.big {
+
+    width: 100%;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+div.pad {
+    /*padding-left: 30px;
+    background-color: darkgray;*/
+}
+
+nav {
+    width: 100%;
+    /*top: 90px;*/
+}
+
+ul.menu {
+    height: 55px;
+    background-color: #6b9ad0;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    z-index: 999999;
+    padding: 0;
+    border-bottom: 5px solid #c6defa;
+}
+
+nav.min {
+    position: fixed;
+    top:0;
+    box-shadow: 0 0 8px 2px #bfcad5;
+
+}
+
+nav li {
+    display: inline-flex;
+    height: 55px;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+nav li:hover {
+    background-color: #7ca7d9;
+}
+
+a.bloghref {
+    text-decoration: none;
+    color: #69747c;
+    font-size: 20px;
+    font-family: "Arial Narrow";
+}
+
+a.bloghref:hover {
+    text-decoration: underline;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Arial Narrow";
+    position: relative;
+    margin: 0 20px;
+}
+
+.lorem {
+    color: #69747C;
+    font-family: Arial;
+    font-size: 12px;
+    text-align: justify;
+
+}
+
+body {
+    margin: 0;
+}
+
+.blog {
+    padding-top: 50px;
+}
+
+.sideblog {
+    font-family: Arial;
+    font-size: 12px;
+    text-align: justify;
+    color: #69747C;
+}

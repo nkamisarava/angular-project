@@ -8,26 +8,28 @@
  *
  * Main module of the application.
  */
-angular
-  .module('angularProjectApp', [
+var app = angular.module('angularProjectApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+    'ngTouch',
+    'ui.bootstrap'
+])
+    .config(function ($routeProvider) {
+        $routeProvider
+            .when('/', {
+                /*templateUrl: 'views/main.html',
+                controller: 'MainCtrl'*/
+                templateUrl: 'views/post.html',
+                controller: 'ModalDemoCtrl'
+            })
+//            .when('/post', {
+//                templateUrl: 'views/post.html',
+//                controller: 'ModalDemoCtrl'
+//            })
+            .otherwise({
+                redirectTo: '/'
+            });
+    });
