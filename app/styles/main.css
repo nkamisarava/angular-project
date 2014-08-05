@@ -1,3 +1,17 @@
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:100%;
+    height:100%;
+    z-index: 1000;
+    background-image:url(../images/transpBlack10.png);
+}
+
+.error {
+    color: red;
+}
+
 /* Space out content a bit */
 body {
   padding-top: 20px;
