@@ -28,8 +28,8 @@ var app = angular
 //        controller: 'AboutCtrl'
 //      })
             .when('/', {
-                templateUrl: '../views/posts.html',
-                controller: 'postCtrl'
+                templateUrl: '../views/posts.html'
+                //controller: 'postCtrl'
             })
             .otherwise({
                 redirectTo: '/'

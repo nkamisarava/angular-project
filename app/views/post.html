@@ -1,0 +1,14 @@
+<div class="blog" ng-repeat="post in posts">
+    <img class="big" ng-src="{{post.img}}"/>
+    <h4><a href="#" class="bloghref">{{post.title}}</a></h4>
+    <hr>
+    <div class="lorem">
+        <span>{{post.date | date:'hh:mm  MMMM dd, yyyy'}}</span>
+        <span style="float: right">by {{post.author}}</span>
+    </div>
+    <hr>
+    <p class="lorem">
+        {{post.text}}
+    </p>
+    <br/><br/>
+</div>
