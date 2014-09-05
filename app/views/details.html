@@ -1,0 +1,26 @@
+<article>
+    <img class="big" ng-src="{{post.image}}"/>
+
+    <div ng-click="activePost(post)">
+        <span>
+            <h4><a class="bloghref">{{post.title}}</a></h4>
+        </span>
+
+        <div class="delete" ng-if="editing">
+            <button class="btn btn-success" ng-click="newPost()" data-toggle="modal" data-target="#myModal">Edit
+                Post
+            </button>
+            <button class="btn btn-danger" ng-click="delete(post)">Delete</button>
+        </div>
+    </div>
+
+    <hr>
+    <div class="lorem clearfix">
+        <span>{{post.date | date:'hh:mm  MMMM dd, yyyy'}}</span>
+        <span style="float: right">by {{post.author}}</span>
+    </div>
+    <hr>
+    <p class="lorem">
+        {{post.body}}
+    </p>
+</article>

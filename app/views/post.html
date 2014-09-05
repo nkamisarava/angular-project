@@ -1,10 +1,11 @@
 <div>
-    <div class="blog" ng-repeat="post in posts">
-        <img class="big" ng-src="{{post.image}}"/>
+    <!--<div class="blog" ng-repeat="post in posts | limitTo: 3">-->
+    <div class="blog" ng-repeat="post in posts | orderBy:'date'">
+        <img ng-class="{'big' : post.image !== undefined}" ng-src="{{post.image}}"/>
 
         <div ng-click="activePost(post)">
         <span>
-            <h4><a href="#" class="bloghref">{{post.title}}</a></h4>
+            <h4><a href="#/details/{{post._id}}" class="bloghref" ng-click="locate(post, id)">{{post.title}}</a></h4>
         </span>
             <div class="delete" ng-if="editing">
                 <button class="btn btn-success" ng-click="newPost()" data-toggle="modal" data-target="#myModal">Edit
@@ -15,7 +16,7 @@
         </div>
 
         <hr>
-        <div class="lorem">
+        <div class="lorem clearfix">
             <span>{{post.date | date:'hh:mm  MMMM dd, yyyy'}}</span>
             <span style="float: right">by {{post.author}}</span>
         </div>

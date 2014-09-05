@@ -31,6 +31,10 @@ var app = angular
                 templateUrl: '../views/posts.html',
                 controller: 'postCtrl'
             })
+            .when('/details/:_id', {
+                templateUrl: '../views/details.html',
+                controller: 'detailsCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });
